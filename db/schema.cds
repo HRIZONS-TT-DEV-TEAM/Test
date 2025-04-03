@@ -1,0 +1,46 @@
+using { managed } from '@sap/cds/common';
+aspect entity : managed { key ID: Integer }
+
+entity AppCofing : entity {
+    metric : Association to Metric;
+    nodeId : String(255);
+    managerIds : String(255);
+    nodeTitle : String(255);
+    nodeFirstName : String(255);
+    nodeLastName : String(255);
+    nodeDivision : String(255);
+    nodeDepartment : String(255);
+    nodeLocation : String(255);
+    displayId : String(255);
+    metricDefault : String(255);
+    spanOfControl : String(255);
+    depth : String(255);
+    dateSelectorType : String(255);
+    hierarchySwitch : String(255);
+    expand : String(255);
+    searchable : Association to Searchable;
+}
+
+entity Metric : entity {
+    metricName : String(255);
+    apiField : String(255);
+    name : String(255);
+    darken : Boolean;
+    dateToAge : Boolean;
+    nullColor : String(255);
+    nullStroke : String(255);
+    fillStyle : String(255);
+    type : String(255);
+    sort : Boolean;
+    ignoreZero : Boolean;
+    color : String(255);
+    len : Integer;
+    valueMap : String(255);
+    colorOrdinal : String(255); //should probably be a dictionary
+    yesNo : Boolean;
+}
+
+entity Searchable : entity {
+    name : String(255);
+    fields : String(255);
+}
