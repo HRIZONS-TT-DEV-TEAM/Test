@@ -36,7 +36,7 @@ entity Metric : entity {
     color : String(255);
     len : Integer;
     valueMap : String(255);
-    colorOrdinal : String(255); //should probably be a dictionary
+    colorOrdinal : String(255); // should probably be a dictionary
     yesNo : Boolean;
 }
 
@@ -44,3 +44,28 @@ entity Searchable : entity {
     name : String(255);
     fields : String(255);
 }
+
+entity SfConfig : entity {
+    id : String(255); // may cause problems with key
+    startEntity : String(255);
+    entityConfig : Association to EntityConfig;
+    headshotConfig : Association to HeadshotConfig;
+}
+
+entity EntityConfig : entity {
+    apiEntity : String(255);
+    expands : String(255);
+    filter : String(255);
+    ![select] : String(255); // "select" is a reserved word, consider changing
+    concurrency : String(255);
+}
+
+entity HeadshotConfig : entity {
+    headshotDelay : String(255);
+    multiphotoType : String(255);
+    singlePhotoType : String(255);
+    concurrency : String(255);
+    preload : String(255);
+    batch : String(255);
+}
+
