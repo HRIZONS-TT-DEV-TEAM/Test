@@ -69,3 +69,7 @@ entity HeadshotConfig : entity {
     batch : String(255);
 }
 
+entity ValueMap : entity {
+    properties : String(255); // should probably be a dictionary
+}
+
