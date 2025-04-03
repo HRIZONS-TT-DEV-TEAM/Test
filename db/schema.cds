@@ -46,7 +46,7 @@ entity Searchable : entity {
 }
 
 entity SfConfig : entity {
-    id : String(255); // may cause problems with key
+    //id : String(255); // may cause problems with key
     startEntity : String(255);
     entityConfig : Association to EntityConfig;
     headshotConfig : Association to HeadshotConfig;
@@ -72,4 +72,3 @@ entity HeadshotConfig : entity {
 entity ValueMap : entity {
     properties : String(255); // should probably be a dictionary
 }
-
