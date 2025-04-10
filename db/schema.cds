@@ -93,7 +93,7 @@ entity ValueMap{
       
 }
 
- //properties_ref     //Properties on properties.parent = $self;
+ //properties_ref yoooooo    //Properties on properties.parent = $self;
 
 
     //properties : Composition of many ValueMap on properties.parent = $self; 
